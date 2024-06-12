@@ -1,23 +1,62 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
+    <div class="row">
+        <div class="col-md-6 col-xl-3">
+            <div class="card stat-widget">
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+                    <h5 class="card-title">New Customers</h5>
+                    <h2>132</h2>
+                    <p>From last week</p>
+                    <div class="progress">
+                        <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="width: 25%"
+                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
                         </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+            <div class="card stat-widget">
+                <div class="card-body">
+                    <h5 class="card-title">Orders</h5>
+                    <h2>287</h2>
+                    <p>Orders in waitlist</p>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 50%"
+                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+            <div class="card stat-widget">
+                <div class="card-body">
+                    <h5 class="card-title">Monthly Profit</h5>
+                    <h2>7.4K</h2>
+                    <p>For last 30 days</p>
+                    <div class="progress">
+                        <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 60%"
+                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+            <div class="card stat-widget">
+                <div class="card-body">
+                    <h5 class="card-title">Orders</h5>
+                    <h2>87</h2>
+                    <p>Orders in waitlist</p>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" style="width: 50%"
+                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection
