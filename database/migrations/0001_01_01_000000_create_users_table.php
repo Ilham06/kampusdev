@@ -15,9 +15,18 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('avatar')->nullable();
+            $table->boolean('is_admin')->default(false);
+            $table->string('phone')->nullable();
+            $table->text('bio')->nullable();
+            $table->string('ig_url')->nullable();
+            $table->string('lk_url')->nullable();
+            $table->string('yt_url')->nullable();
+            $table->string('occupation')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
 

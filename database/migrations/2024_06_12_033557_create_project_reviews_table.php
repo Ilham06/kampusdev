@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('project_reviews', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('project_id')->constrained('projects')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('user');
+            $table->string('note');
+            $table->integer('rate');
             $table->timestamps();
         });
     }

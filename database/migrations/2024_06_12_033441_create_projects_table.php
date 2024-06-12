@@ -13,6 +13,19 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('project_id')->constrained('projects')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('title')->unique();
+            $table->string('slug')->unique();
+            $table->string('banner');
+            $table->longText('description');
+            $table->string('demo_url')->nullable();
+            $table->string('video_demo_url')->nullable();
+            $table->json('features');
+            $table->json('technologies');
+            $table->json('buy_packages');
+            $table->text('other_information');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
