@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\TestimoniController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -33,6 +34,13 @@ Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     Route::post('/review/get-form', [ReviewController::class, 'getForm'])->name('review.get-form');
     Route::post('/review', [ReviewController::class, 'store'])->name('review.store');
     Route::delete('/review/{id}', [ReviewController::class, 'destroy'])->name('review.destroy');
+
+    Route::get('/testimoni', [TestimoniController::class, 'index'])->name('testimoni.index');
+    Route::get('/testimoni/create', [TestimoniController::class, 'create'])->name('testimoni.create');
+    Route::get('/testimoni/{id}', [TestimoniController::class, 'edit'])->name('testimoni.edit');
+    Route::post('testimoni/', [TestimoniController::class, 'store'])->name('testimoni.store');
+    Route::put('testimoni/{id}', [TestimoniController::class, 'update'])->name('testimoni.update');
+    Route::delete('/testimoni/{id}', [TestimoniController::class, 'destroy'])->name('testimoni.destroy');
 });
 
 Route::get('/write-review/{id}', [ReviewController::class, 'write'])->name('review.write');

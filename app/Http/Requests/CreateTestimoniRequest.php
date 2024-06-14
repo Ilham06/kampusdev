@@ -4,14 +4,14 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateReviewRequest extends FormRequest
+class CreateTestimoniRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,9 +22,10 @@ class CreateReviewRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'user' => 'required',
-            'note' => 'required',
-            'rate' => 'required'
+            'user' => 'required|string|max:255',
+            'project_id' => 'required|exists:projects,id',
+            'note' => 'required|string',
+            'proof' => 'required|image',
         ];
     }
 }

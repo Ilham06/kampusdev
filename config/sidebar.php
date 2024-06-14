@@ -32,7 +32,7 @@ return [
             ],
             [
                'label' => 'Review Testimoni',
-               'url' => 'project-testimoni',
+               'url' => '/testimoni',
                'icon' => '',
             ],
          ]
