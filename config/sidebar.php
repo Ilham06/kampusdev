@@ -27,7 +27,7 @@ return [
             ],
             [
                'label' => 'Review Projek',
-               'url' => 'project-review',
+               'url' => '/review',
                'icon' => '',
             ],
             [

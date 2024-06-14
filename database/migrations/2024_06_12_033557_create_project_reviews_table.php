@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('user');
             $table->string('note');
             $table->integer('rate');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

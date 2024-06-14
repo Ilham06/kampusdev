@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,4 +27,13 @@ Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     Route::get('/project/{slug}', [ProjectController::class, 'edit'])->name('project.edit');
     Route::put('project/{id}', [ProjectController::class, 'update'])->name('project.update');
     Route::delete('/project/{id}', [ProjectController::class, 'destroy'])->name('project.destroy');
+
+    Route::get('/review', [ReviewController::class, 'index'])->name('review.index');
+    Route::get('/review/create', [ReviewController::class, 'create'])->name('review.create');
+    Route::post('/review/get-form', [ReviewController::class, 'getForm'])->name('review.get-form');
+    Route::post('/review', [ReviewController::class, 'store'])->name('review.store');
+    Route::delete('/review/{id}', [ReviewController::class, 'destroy'])->name('review.destroy');
 });
+
+Route::get('/write-review/{id}', [ReviewController::class, 'write'])->name('review.write');
+Route::get('/write-review/{id}/success', [ReviewController::class, 'success'])->name('review.success');
