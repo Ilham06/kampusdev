@@ -35,6 +35,16 @@ class Project extends Model
     }
 
     /**
+     * Get all of the project_images for the Project
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function project_images(): HasMany
+    {
+        return $this->hasMany(ProjectImage::class);
+    }
+
+    /**
      * Get all of the transactions for the Project
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -42,5 +52,29 @@ class Project extends Model
     public function transactions(): HasMany
     {
         return $this->hasMany(Transaction::class);
+    }
+
+    protected function casts(): array
+    {
+        return [
+            'features' => 'json',
+            'technologies' => 'json',
+            'buy_packages' => 'json'
+        ];
+    }
+
+    public function getFeaturesAsStringAttribute()
+    {
+        return implode(';', json_decode($this->features));
+    }
+
+    public function getTechnologiesAsStringAttribute()
+    {
+        return implode(';', json_decode($this->technologies));
+    }
+
+    public function getPackagesAsStringAttribute()
+    {
+        return implode(';', json_decode($this->buy_packages));
     }
 }

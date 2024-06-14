@@ -11,14 +11,14 @@
                     <ul class="">
 
                         @foreach ($sidebar['children'] as $children)
-                            <li><a href="dashboard{{ $children['url'] }}"><i class="far fa-circle"></i>{{ $children['label'] }}</a>
+                            <li><a href="/dashboard{{ $children['url'] }}"><i class="far fa-circle"></i>{{ $children['label'] }}</a>
                             </li>
                         @endforeach
                     </ul>
                 </li>
             @else
                 <li class="my-1">
-                    <a href="dashboard{{ $sidebar['url'] }}"><i
+                    <a href="/dashboard{{ $sidebar['url'] }}"><i
                             data-feather="{{ $sidebar['icon'] }}"></i>{{ $sidebar['label'] }}</a>
                 </li>
             @endif

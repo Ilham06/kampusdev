@@ -104,6 +104,7 @@
     <link href="../../assets/plugins/font-awesome/css/all.min.css" rel="stylesheet">
     <link href="../../assets/plugins/perfectscroll/perfect-scrollbar.css" rel="stylesheet">
     <link href="../../assets/plugins/apexcharts/apexcharts.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
 
 
     <!-- Theme Styles -->
@@ -139,6 +140,56 @@
     <script src="../../assets/plugins/apexcharts/apexcharts.min.js"></script>
     <script src="../../assets/js/main.min.js"></script>
     <script src="../../assets/js/pages/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+
+    <script>
+        var editor = new Quill('#project_description', {
+            theme: 'snow'
+        });
+        var quillEditor = document.getElementById('quill-editor-area');
+        editor.on('text-change', function() {
+            quillEditor.value = editor.root.innerHTML;
+        });
+
+        quillEditor.addEventListener('input', function() {
+            editor.root.innerHTML = quillEditor.value;
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const addImageButton = document.querySelector('.add-image-field');
+        const imagesContainer = document.querySelector('.images_container');
+        
+        addImageButton.addEventListener('click', function() {
+            const index = imagesContainer.children.length;
+            const newImageField = document.createElement('div');
+            newImageField.classList.add('row', 'mb-3', 'image_field');
+            
+            newImageField.innerHTML = `
+                <div class="col">
+                    <input class="form-control" type="text" name="images[${index}][label]" placeholder="Label">
+                </div>
+                <div class="col">
+                    <input class="form-control" type="file" name="images[${index}][file]">
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-danger remove-image-field">Remove</button>
+                </div>
+            `;
+            
+            newImageField.querySelector('.remove-image-field').addEventListener('click', function() {
+                newImageField.remove();
+            });
+            
+            imagesContainer.appendChild(newImageField);
+        });
+
+        document.querySelectorAll('.remove-image-field').forEach(button => {
+            button.addEventListener('click', function() {
+                button.closest('.image_field').remove();
+            });
+        });
+    });
+    </script>
 </body>
 
 </html>
