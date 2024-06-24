@@ -77,4 +77,15 @@ class Project extends Model
     {
         return implode(';', json_decode($this->buy_packages));
     }
+
+    public function getTrimTitleAttribute()
+    {
+        $string = $this->title;
+        if (strlen($this->title) > 25) {
+            // Trim the string to the specified length and add ellipsis
+            $string = substr($this->title, 0, 25) . '...';
+        }
+        
+        return $string;
+    }
 }

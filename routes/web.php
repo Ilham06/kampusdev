@@ -50,3 +50,5 @@ Route::get('/write-review/{id}', [ReviewController::class, 'write'])->name('revi
 Route::get('/write-review/{id}/success', [ReviewController::class, 'success'])->name('review.success');
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
+Route::get('/project/{slug}', [HomeController::class, 'detail'])->name('project.detail');
+Route::get('/project', [HomeController::class, 'list'])->name('project.list');

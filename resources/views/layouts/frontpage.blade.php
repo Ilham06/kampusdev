@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="{{ asset('assets/fontpage/css/bootstrap.min.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/fontpage/css/all.min.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/fontpage/css/slick.css') }}" type="text/css" media="all" />
-    <link rel="stylesheet" href="{{asset('assets/fontpage/css/simple-line-icons.css')}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('assets/fontpage/css/simple-line-icons.css') }}" type="text/css"
+        media="all" />
     <link rel="stylesheet" href="{{ asset('assets/fontpage/css/style.css') }}" type="text/css" media="all" />
 
     <!--[if lt IE 9]>
@@ -58,7 +59,12 @@
         <div class="main-overlay"></div>
 
         <!-- header -->
-        @include('components.frontpage.main-navbar')
+        @if (request()->is('/'))
+            @include('components.frontpage.main-navbar')
+        @else
+            @include('components.frontpage.second-navbar')
+        @endif
+
 
         <!-- section main content -->
         <section class="main-content mb-5 pb-5">

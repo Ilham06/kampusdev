@@ -5,7 +5,7 @@
                <!-- site logo -->
                <a class="navbar-brand" href="personal.html"><img src="{{asset('assets/fontpage/images/other/avatar-lg.png')}}"
                        alt="logo" /></a>
-               <a href="personal.html" class="d-block text-logo">Koding Kampus<span class="dot">.</span></a>
+               <a href="personal.html" class="d-block text-logo">KampusDev<span class="dot">.</span></a>
                <span class="slogan d-block">Dapatkan semua solusi kebutuhan project kuliahmu disini.</span>
            </div>
        </div>

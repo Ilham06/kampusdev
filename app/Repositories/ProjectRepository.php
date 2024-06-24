@@ -28,6 +28,16 @@ class ProjectRepository
         return $this->model->paginate(10);
     }
 
+    public function getByCategory($category_id)
+    {
+        return $this->model->whereCategoryId($category_id)->with('project_images')->paginate(10);
+    }
+
+    public function getByCategoryWithLimit($category_id, $limit)
+    {
+        return $this->model->whereCategoryId($category_id)->with('project_images')->take($limit)->get();
+    }
+
     public function findOne($id)
     {
         return $this->model->findOrFail($id);

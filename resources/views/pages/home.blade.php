@@ -1,12 +1,12 @@
 @extends('layouts.frontpage')
 
 @section('content')
-    <div class="form-group d-flex gap-2">
-        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Cari project ..."
-            required="required" data-error="Name is required." />
-        <div class="help-block with-errors"></div>
-        <button type="submit" name="submit" id="submit" value="Submit" class="btn btn-default">Cari</button>
-    </div>
+    <form action="{{ route('project.list') }}">
+        <div class="form-group d-flex gap-2">
+            <input type="text" class="form-control" name="title" id="title" placeholder="Cari project ..." />
+            <button type="submit" id="submit" value="Submit" class="btn btn-default">Cari</button>
+        </div>
+    </form>
     <div class="row gy-4">
         <div class="col-lg-8">
             <div class="row gy-4">
@@ -28,16 +28,14 @@
                             <div class="details">
                                 <ul class="meta list-inline mb-0">
                                     <li class="list-inline-item">
-                                        <a href="#" class="fw-bold">{{ $project->category->name }}</a>
+                                        <a href="#" class="fw-bold">{{ $project->category->alias }}</a>
                                     </li>
-                                    <li class="list-inline-item">{{ $project->created_at }}</li>
+                                    <li class="list-inline-item">
+                                        {{ \Carbon\Carbon::parse($project->created_at)->format('d-m-Y') }}</li>
                                 </ul>
                                 <h5 class="post-title mb-3 mt-3">
-                                    <a href="blog-single.html">{{ $project->title }}</a>
+                                    <a href="{{ route('project.detail', $project->slug) }}">{{ $project->title }}</a>
                                 </h5>
-                                {{-- <p class="excerpt mb-0">
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, quam.
-                          </p> --}}
                             </div>
                             <div class="post-bottom d-flex align-items-center justify-content-between">
                                 <div class="">
@@ -131,19 +129,7 @@
                 </div>
 
                 <!-- widget categories -->
-                <div class="widget rounded">
-                    <div class="widget-header text-center">
-                        <h3 class="widget-title">Kategori</h3>
-                        <img src="images/wave.svg" class="wave" alt="wave" />
-                    </div>
-                    <div class="widget-content">
-                        <ul class="list">
-                            @foreach ($categories as $category)
-                                <li><a href="#">{{ $category->name }}</a><span>(5)</span></li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
+                @include('components.frontpage.sticky-category')
             </div>
         </div>
     </div>
