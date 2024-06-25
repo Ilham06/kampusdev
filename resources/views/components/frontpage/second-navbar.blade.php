@@ -7,14 +7,15 @@
 
                 <div class="col-md-4 col-xs-12">
                     <!-- site logo -->
-                    
+
                     <a class="d-block text-logo" href="/">Kampusdev<span class="dot">.</span></a>
                 </div>
 
                 <div class="col-md-8 d-none d-md-block">
                     <!-- social icons -->
                     <ul class="social-icons list-unstyled list-inline mb-0 float-end">
-                        <li class="list-inline-item"><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                        <li class="list-inline-item"><a href="https://wa.me/62{{ config('general.phone') }}"><i
+                                    class="fab fa-whatsapp"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin"></i></a></li>
@@ -28,7 +29,7 @@
     <nav class="navbar navbar-expand-lg">
         <!-- header bottom -->
         <div class="header-bottom  w-100">
-            
+
             <div class="container-xl">
                 <div class="d-flex align-items-center">
                     <div class="collapse navbar-collapse flex-grow-1">
@@ -38,16 +39,32 @@
                                 <a class="nav-link" href="{{ route('homepage') }}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="category.html">Projek</a>
+                                <a class="nav-link" href="{{ route('project.list') }}">Projek</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="category.html">Artikel</a>
+                                <a class="nav-link" href="{{ route('article') }}">Artikel</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="index.html">Tentang Kami</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('aboutme') }}">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('faq') }}">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('kebijakanlayanan') }}">Syarat dan
+                                            Ketentuan</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('contact') }}">Kontak</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="category.html">Tentang Kami</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Kontak</a>
+                                <a class="nav-link" href="{{ route('contact') }}">Kontak</a>
                             </li>
                         </ul>
                     </div>

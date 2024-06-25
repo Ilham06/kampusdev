@@ -52,3 +52,8 @@ Route::get('/write-review/{id}/success', [ReviewController::class, 'success'])->
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
 Route::get('/project/{slug}', [HomeController::class, 'detail'])->name('project.detail');
 Route::get('/project', [HomeController::class, 'list'])->name('project.list');
+Route::get('/tentang-kami', [HomeController::class, 'about'])->name('aboutme');
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+Route::get('/kebijakan-layanan', [HomeController::class, 'kebijakanlayanan'])->name('kebijakanlayanan');
+Route::get('/kontak', [HomeController::class, 'contact'])->name('contact');
+Route::get('/artikel', [HomeController::class, 'article'])->name('article');

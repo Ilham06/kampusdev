@@ -46,6 +46,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.main-color {
+  color: #8F9BAD;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -498,7 +502,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #FE4F70;
+  /* color: #FE4F70; */
   outline: 0;
   text-decoration: none;
   -webkit-transition: all 0.2s ease-in-out;
@@ -3235,7 +3239,7 @@ button:focus {
 
 .accordion-button:not(.collapsed) {
   background-color: transparent;
-  color: #7888FC;
+  color: #FE4F70;
 }
 
 .accordion-item:first-of-type .accordion-button {
@@ -3297,4 +3301,10 @@ button:focus {
 .no-loader .loader {
   visibility: hidden;
   opacity: 0;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  background: #707a88;
+  opacity: .5;
+  border-radius: 50%;
 }

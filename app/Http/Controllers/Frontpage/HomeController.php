@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Project;
 use App\Repositories\CategoryRepository;
 use App\Repositories\ProjectRepository;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -19,6 +20,17 @@ class HomeController extends Controller
         $this->projectRepository = $projectRepository;
     }
 
+    private function generateGreeting($hour)
+    {
+        if ($hour >= 5 && $hour < 12) {
+            return 'Selamat Pagi';
+        } elseif ($hour >= 12 && $hour < 18) {
+            return 'Selamat Siang';
+        } else {
+            return 'Selamat Malam';
+        }
+    }
+
     public function index()
     {
         $categories = $this->categoryRepository->getAll();
@@ -26,7 +38,10 @@ class HomeController extends Controller
         $projects = $this->projectRepository->getAll();
         $populars = $this->projectRepository->getPopularProjects();
 
-        return view('pages.home', compact('categories', 'projects', 'populars'));
+        $currentHour = Carbon::now()->format('H');
+        $greeting = $this->generateGreeting($currentHour);
+
+        return view('pages.home', compact('categories', 'projects', 'populars', 'greeting'));
     }
 
     public function detail($slug)
@@ -60,5 +75,30 @@ class HomeController extends Controller
         $projects = $projects->paginate(10)->withQueryString();
 
         return view('pages.project-list', compact('projects', 'categories'));
+    }
+
+    public function about()
+    {
+        return view('pages.about');
+    }
+
+    public function faq()
+    {
+        return view('pages.faq');
+    }
+
+    public function kebijakanlayanan()
+    {
+        return view('pages.kebijakanlayanan');
+    }
+
+    public function contact()
+    {
+        return view('pages.contact');
+    }
+
+    public function article()
+    {
+        return view('pages.article');
     }
 }

@@ -6,7 +6,7 @@
     <title>Kampus Dev - Solusi Koding Kampusmu</title>
     <meta name="description" content="Katen - Minimal Blog & Magazine HTML Theme" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/main-logo.png') }}" />
 
     <!-- STYLES -->
     <link rel="stylesheet" href="{{ asset('assets/fontpage/css/bootstrap.min.css') }}" type="text/css" media="all" />
@@ -45,7 +45,7 @@
 
         <!-- section main content -->
         <section class="main-content mb-5 pb-5">
-            <div class="container">
+            <div class="">
                 @yield('content')
             </div>
         </section>
@@ -67,7 +67,8 @@
             <!-- form -->
             <form action="{{ route('project.list') }}">
                 <div class="form-group d-flex gap-2">
-                    <input type="text" class="form-control" name="title" id="title" placeholder="nama project ..." />
+                    <input type="text" class="form-control" name="title" id="title"
+                        placeholder="nama project ..." />
                     <button type="submit" id="submit" value="Submit" class="btn btn-default">Cari</button>
                 </div>
             </form>

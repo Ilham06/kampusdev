@@ -6,7 +6,7 @@
     <div class="widget-content">
         <ul class="list">
             @foreach ($categories as $category)
-                <li><a href="/project?category={{ $category->slug }}">{{ $category->name }}</a><span>({{ $category->projects_count }})</span></li>
+                <li><a href="/project?category={{ $category->slug }}">{{ $category->name }}</a></li>
             @endforeach
         </ul>
     </div>

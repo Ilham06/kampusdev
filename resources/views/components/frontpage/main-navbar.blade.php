@@ -4,8 +4,8 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-md-4 col-sm-12 col-xs-12 text-center">
                 <!-- site logo -->
-                <a class="navbar-brand" href="personal.html"><img
-                        src="{{ asset('assets/fontpage/images/other/avatar-lg.png') }}" alt="logo" /></a>
+                <a class="navbar-brand" href="personal.html"><img src="{{ asset('assets/main-logo.png') }}"
+                        alt="logo" /></a>
                 <a href="personal.html" class="d-block text-logo">KampusDev<span class="dot">.</span></a>
                 <span class="slogan d-block">Dapatkan semua solusi kebutuhan project kuliahmu disini.</span>
             </div>
@@ -28,13 +28,28 @@
                                 <a class="nav-link" href="{{ route('project.list') }}">Projek</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="category.html">Artikel</a>
+                                <a class="nav-link" href="{{ route('article') }}">Artikel</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="index.html">Tentang Kami</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('aboutme') }}">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('faq') }}">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('kebijakanlayanan') }}">Syarat dan
+                                            Ketentuan</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('contact') }}">Kontak</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="category.html">Tentang Kami</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Kontak</a>
+                                <a class="nav-link" href="{{ route('contact') }}">Kontak</a>
                             </li>
                         </ul>
                     </div>
