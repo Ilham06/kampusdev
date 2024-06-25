@@ -20,17 +20,22 @@ class ProjectRepository
 
     public function getAll()
     {
-        return $this->model->all();
+        return $this->model->popularAllTime()->get();
     }
 
     public function pagination()
     {
-        return $this->model->paginate(10);
+        return $this->model->popularAllTime()->paginate(10);
+    }
+
+    public function getPopularProjects()
+    {
+        return $this->model->popularAllTime()->take(5)->get();
     }
 
     public function getByCategory($category_id)
     {
-        return $this->model->whereCategoryId($category_id)->with('project_images')->paginate(10);
+        return $this->model->popularAllTime()->whereCategoryId($category_id)->with('project_images')->paginate(10);
     }
 
     public function getByCategoryWithLimit($category_id, $limit)

@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Katen - Minimal Blog & Magazine HTML Theme</title>
+    <title>Kampus Dev - Solusi Koding Kampusmu</title>
     <meta name="description" content="Katen - Minimal Blog & Magazine HTML Theme" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('assets/fontpage/css/simple-line-icons.css') }}" type="text/css"
         media="all" />
     <link rel="stylesheet" href="{{ asset('assets/fontpage/css/style.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -24,33 +25,9 @@
 
 <body>
     <!-- preloader -->
-    <div id="preloader">
-        <div class="book">
-            <div class="inner">
-                <div class="left"></div>
-                <div class="middle"></div>
-                <div class="right"></div>
-            </div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+    <div class="loader">
+        <div class="spinner-grow" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
     </div>
 
@@ -85,15 +62,14 @@
         <!-- content -->
         <div class="search-content">
             <div class="text-center">
-                <h3 class="mb-4 mt-0">Press ESC to close</h3>
+                <h3 class="mb-4 mt-0">Projek apa yang ingin anda cari?</h3>
             </div>
             <!-- form -->
-            <form class="d-flex search-form">
-                <input class="form-control me-2" type="search" placeholder="Search and press enter ..."
-                    aria-label="Search" />
-                <button class="btn btn-default btn-lg" type="submit">
-                    <i class="icon-magnifier"></i>
-                </button>
+            <form action="{{ route('project.list') }}">
+                <div class="form-group d-flex gap-2">
+                    <input type="text" class="form-control" name="title" id="title" placeholder="nama project ..." />
+                    <button type="submit" id="submit" value="Submit" class="btn btn-default">Cari</button>
+                </div>
             </form>
         </div>
     </div>

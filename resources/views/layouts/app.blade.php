@@ -123,9 +123,9 @@
 
     <div class="loader">
         <div class="spinner-grow text-primary" role="status">
-          <span class="sr-only">Loading...</span>
+            <span class="sr-only">Loading...</span>
         </div>
-      </div>
+    </div>
     <div class="page-container">
         @include('partials.navbar')
         @include('partials.sidebar')
@@ -161,15 +161,15 @@
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-        const addImageButton = document.querySelector('.add-image-field');
-        const imagesContainer = document.querySelector('.images_container');
-        
-        addImageButton.addEventListener('click', function() {
-            const index = imagesContainer.children.length;
-            const newImageField = document.createElement('div');
-            newImageField.classList.add('row', 'mb-3', 'image_field');
-            
-            newImageField.innerHTML = `
+            const addImageButton = document.querySelector('.add-image-field');
+            const imagesContainer = document.querySelector('.images_container');
+
+            addImageButton.addEventListener('click', function() {
+                const index = imagesContainer.children.length;
+                const newImageField = document.createElement('div');
+                newImageField.classList.add('row', 'mb-3', 'image_field');
+
+                newImageField.innerHTML = `
                 <div class="col">
                     <input class="form-control" type="text" name="images[${index}][label]" placeholder="Label">
                 </div>
@@ -180,20 +180,20 @@
                     <button type="button" class="btn btn-danger remove-image-field">Remove</button>
                 </div>
             `;
-            
-            newImageField.querySelector('.remove-image-field').addEventListener('click', function() {
-                newImageField.remove();
-            });
-            
-            imagesContainer.appendChild(newImageField);
-        });
 
-        document.querySelectorAll('.remove-image-field').forEach(button => {
-            button.addEventListener('click', function() {
-                button.closest('.image_field').remove();
+                newImageField.querySelector('.remove-image-field').addEventListener('click', function() {
+                    newImageField.remove();
+                });
+
+                imagesContainer.appendChild(newImageField);
+            });
+
+            document.querySelectorAll('.remove-image-field').forEach(button => {
+                button.addEventListener('click', function() {
+                    button.closest('.image_field').remove();
+                });
             });
         });
-    });
     </script>
 </body>
 

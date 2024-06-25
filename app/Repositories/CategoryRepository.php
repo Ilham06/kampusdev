@@ -15,7 +15,7 @@ class CategoryRepository
 
     public function getAll()
     {
-        return $this->model->all();
+        return $this->model->withCount('projects')->get();
     }
 
     public function pagination()

@@ -22,14 +22,17 @@ class HomeController extends Controller
     public function index()
     {
         $categories = $this->categoryRepository->getAll();
+        
         $projects = $this->projectRepository->getAll();
+        $populars = $this->projectRepository->getPopularProjects();
 
-        return view('pages.home', compact('categories', 'projects'));
+        return view('pages.home', compact('categories', 'projects', 'populars'));
     }
 
     public function detail($slug)
     {
         $project = $this->projectRepository->findBySlug($slug);
+        $project->visit();
         $categories = $this->categoryRepository->getAll();
         $related_projects = $this->projectRepository->getByCategoryWithLimit($project->category_id, 2);
 

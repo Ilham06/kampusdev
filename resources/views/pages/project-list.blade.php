@@ -13,14 +13,15 @@
         </div>
     </form>
     <div class="text-center">
-        <h3>Hasil pencarian untuk : User page</h3>
+        @if (request()->get('title'))
+            <h3>Hasil pencarian untuk : {{ request()->get('title') }}</h3>
+        @endif
     </div>
     <div class="text-center mb-5">
-        <a href="{{ '/project?title=' . request()->get('title') }}"><button
-            class="btn btn-simple">Semua</button></a>
+        <a href="{{ '/project?title=' . request()->get('title') }}"><button class="btn btn-simple">Semua</button></a>
         @foreach ($categories as $category)
             <a href="{{ '/project?title=' . request()->get('title') . '&category=' . $category->slug }}"><button
-                    class="btn btn-simple">{{ $category->alias }}</button></a>
+                    class="mx-1 btn btn-simple {{ request()->get('category') == $category->slug ? 'active' : '' }}">{{ $category->alias }}</button></a>
         @endforeach
     </div>
     <div class="row gy-4">
@@ -33,7 +34,7 @@
                         <!-- post -->
                         <div class="post post-grid rounded bordered">
                             <div class="thumb top-rounded">
-                                <a href="category.html" class="category-badge position-absolute">Baru</a>
+                                <a href="category.html" class="category-badge position-absolute">{{ $project->category->alias }}</a>
 
                                 <a href="blog-single.html">
                                     <div class="inner">
@@ -44,25 +45,14 @@
                             <div class="details">
                                 <ul class="meta list-inline mb-0">
                                     <li class="list-inline-item">
-                                        <a href="#" class="fw-bold">{{ $project->category->alias }}</a>
+                                        <a href="#" class="">{{ json_decode($project->technologies)[0] }}</a>
                                     </li>
                                     <li class="list-inline-item">
-                                        {{ \Carbon\Carbon::parse($project->created_at)->format('d-m-Y') }}</li>
+                                        {{ \Carbon\Carbon::parse($project->created_at)->format('d M Y') }}</li>
                                 </ul>
                                 <h5 class="post-title mb-3 mt-3">
                                     <a href="{{ route('project.detail', $project->slug) }}">{{ $project->title }}</a>
                                 </h5>
-                                {{-- <p class="excerpt mb-0">
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, quam.
-                          </p> --}}
-                            </div>
-                            <div class="post-bottom d-flex align-items-center justify-content-between">
-                                <div class="">
-                                    <a href="#" class="tag">{{ json_decode($project->technologies)[0] }} </a>
-                                </div>
-                                <div class="more-button float-end">
-                                    <a href="blog-single.html"><span class="icon-options"></span></a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -71,16 +61,6 @@
                 {{ $projects->links() }}
 
             </div>
-
-            {{-- <nav>
-                <ul class="pagination justify-content-center">
-                    <li class="page-item active" aria-current="page">
-                        <span class="page-link">1</span>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                </ul>
-            </nav> --}}
         </div>
 
     </div>

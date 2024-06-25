@@ -5,10 +5,11 @@
         <div class="container-xl">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">{{$project->category->alias}}</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a
+                            href="/project?category={{ $project->category->slug }}">{{ $project->category->alias }}</a></li>
                     <li class="breadcrumb-item active" aria-current="page">
-                     {{$project->title}}
+                        {{ $project->title }}
                     </li>
                 </ol>
             </nav>
@@ -20,16 +21,17 @@
                         <!-- post header -->
                         <div class="post-header">
                             <h1 class="title mt-0 mb-3">
-                                Sistem Pendukung Keputusan Metode TOPSIS
+                                {{ $project->title }}
                             </h1>
                             <ul class="meta list-inline mb-0">
                                 <li class="list-inline-item">
-                                    <a href="#">{{$project->user->name}}</a>
+                                    <a href="#">{{ $project->user->name }}</a>
                                 </li>
                                 <li class="list-inline-item fw-bold">
-                                    <a href="#" class="fw-bold">{{$project->category->name}}</a>
+                                    <a href="/project?category={{ $project->category->slug }}" class="fw-bold">{{ $project->category->name }}</a>
                                 </li>
-                                <li class="list-inline-item">{{\Carbon\Carbon::parse($project->created_at)->format('d-m-Y') }}</li>
+                                <li class="list-inline-item">
+                                    {{ \Carbon\Carbon::parse($project->created_at)->format('d M Y') }}</li>
                             </ul>
                         </div>
                         <!-- featured image -->
@@ -133,7 +135,7 @@
                     <p class="mt-5">Untuk pembelian, pemesanan dan dan informasi lainnya dari project ini atau yang lain,
                         dapat menghubungi kami melalui nomor WhatsApp pada 0822-3437-5472 atau dengan menekan tombol chat
                         dibawah ini.</p>
-                    <button class="btn btn-default">Chat Whatsapp</button>
+                        <a target="_blank" href="https://wa.me/62{{config('general.phone')}}"><button class="btn btn-default">Chat Whatapps</button></a>
 
                     <div class="spacer" data-height="50"></div>
 
@@ -180,26 +182,21 @@
                         <div class="widget rounded">
                             <div class="widget-header text-center">
                                 <h3 class="widget-title">Projek Terkait</h3>
-                                <img src="images/wave.svg" class="wave" alt="wave" />
                             </div>
                             <div class="widget-content">
                                 <!-- post -->
                                 @foreach ($related_projects as $related)
                                     <div class="post post-list-sm circle">
-                                        <div class="thumb circle">
-                                            <a href="blog-single.html">
-                                                <div class="inner">
-                                                    <img src="{{asset('storage/'.$related->banner)}}" alt="post-title" />
-                                                </div>
-                                            </a>
+                                        <div class="thumb rounded mt-2">
+                                            <div class="inner">
+                                                <img src="{{ asset('storage/' . $related->banner) }}" alt="post-title" />
+                                            </div>
                                         </div>
                                         <div class="details clearfix">
                                             <h6 class="post-title my-0">
-                                                <a href="blog-single.html">{{ $related->title }}</a>
+                                                <a
+                                                    href="{{ route('project.detail', $related->slug) }}">{{ $related->title }}</a>
                                             </h6>
-                                            <ul class="meta list-inline mt-1 mb-0">
-                                                <li class="list-inline-item">105 kali dilihat</li>
-                                            </ul>
                                         </div>
                                     </div>
                                 @endforeach
