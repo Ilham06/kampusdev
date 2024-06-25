@@ -4,8 +4,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Kampus Dev - Solusi Koding Kampusmu</title>
-    <meta name="description" content="Katen - Minimal Blog & Magazine HTML Theme" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Temukan solusi koding terbaik dan artikel terbaru di Kampus Dev. Bergabunglah dengan komunitas kami untuk memperdalam pengetahuan teknologi." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/main-logo.png') }}" />
 
     <!-- STYLES -->
@@ -82,40 +82,47 @@
 
         <!-- logo -->
         <div class="logo">
-            <img src="images/logo.svg" alt="Katen" />
+            <a href="personal.html" class="d-block text-logo">KampusDev<span class="dot">.</span></a>
         </div>
 
         <!-- menu -->
         <nav>
             <ul class="vertical-menu">
-                <li class="active">
-                    <a href="index.html">Home</a>
-                    <ul class="submenu">
-                        <li><a href="index.html">Magazine</a></li>
-                        <li><a href="personal.html">Personal</a></li>
-                        <li><a href="personal-alt.html">Personal Alt</a></li>
-                        <li><a href="minimal.html">Minimal</a></li>
-                        <li><a href="classic.html">Classic</a></li>
-                    </ul>
-                </li>
-                <li><a href="category.html">Lifestyle</a></li>
-                <li><a href="category.html">Inspiration</a></li>
                 <li>
-                    <a href="#">Pages</a>
+                    <a href="{{ route('homepage') }}">Home</a>
+                </li>
+                <li>
+                    <a href="{{ route('project.list') }}">Projek</a>
+                </li>
+                <li>
+                    <a href="{{ route('article') }}">Artikel</a>
+                </li>
+                <li class="">
+                    <a href="index.html">Tentang Kami</a>
                     <ul class="submenu">
-                        <li><a href="category.html">Category</a></li>
-                        <li><a href="blog-single.html">Blog Single</a></li>
-                        <li><a href="blog-single-alt.html">Blog Single Alt</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li>
+                            <a href="{{ route('aboutme') }}">Profile</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('faq') }}">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('kebijakanlayanan') }}">Syarat dan
+                                Ketentuan</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('contact') }}">Kontak</a>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="{{ route('contact') }}">Kontak</a>
+                </li>
             </ul>
         </nav>
 
         <!-- social icons -->
-        <ul class="social-icons list-unstyled list-inline mb-0 mt-auto w-100">
+        {{-- <ul class="social-icons list-unstyled list-inline mb-0 mt-auto w-100">
             <li class="list-inline-item">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
             </li>
@@ -134,7 +141,7 @@
             <li class="list-inline-item">
                 <a href="#"><i class="fab fa-youtube"></i></a>
             </li>
-        </ul>
+        </ul> --}}
     </div>
 
     <!-- JAVA SCRIPTS -->

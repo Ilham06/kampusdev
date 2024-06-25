@@ -7,7 +7,7 @@
                 <a class="navbar-brand" href="personal.html"><img src="{{ asset('assets/main-logo.png') }}"
                         alt="logo" /></a>
                 <a href="personal.html" class="d-block text-logo">KampusDev<span class="dot">.</span></a>
-                <span class="slogan d-block">Dapatkan semua solusi kebutuhan project kuliahmu disini.</span>
+                <span class="slogan d-block">Temukan semua solusi kebutuhan project kuliahmu disini.</span>
             </div>
         </div>
     </div>
@@ -59,9 +59,9 @@
                         <button class="search icon-button">
                             <i class="icon-magnifier"></i>
                         </button>
-                        {{-- <button class="burger-menu icon-button ms-2 float-end float-lg-none">
+                        <button class="burger-menu icon-button ms-2 float-end float-lg-none">
                             <span class="burger-icon"></span>
-                        </button> --}}
+                        </button>
                     </div>
                 </div>
             </div>
