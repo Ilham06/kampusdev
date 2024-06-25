@@ -98,7 +98,7 @@
                     <a href="{{ route('article') }}">Artikel</a>
                 </li>
                 <li class="">
-                    <a href="index.html">Tentang Kami</a>
+                    <a href="#">Tentang Kami</a>
                     <ul class="submenu">
                         <li>
                             <a href="{{ route('aboutme') }}">Profile</a>
