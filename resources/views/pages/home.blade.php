@@ -21,10 +21,10 @@
                             <!-- post -->
                             <div class="post post-grid rounded bordered">
                                 <div class="thumb top-rounded">
-                                    <a href="category.html"
+                                    <a href="#"
                                         class="category-badge position-absolute">{{ $project->category->alias }}</a>
 
-                                    <a href="blog-single.html">
+                                    <a href="{{ route('project.detail', $project->slug) }}">
                                         <div class="inner">
                                             <img src="{{ asset('storage/' . $project->banner) }}" alt="post-title" />
                                         </div>
@@ -51,7 +51,7 @@
 
                 <div class="widget rounded mt-5">
                     <div class="widget-about data-bg-image text-center" data-bg-image="images/map-bg.png">
-                        <a href="personal.html" class="d-block text-logo mb-4">KampusDev<span class="dot">.</span></a>
+                        <a href="#" class="d-block text-logo mb-4">KampusDev<span class="dot">.</span></a>
                         <p class="mb-4">Hello.. tidak menemukan projek yang kamu cari? atau butuh jasa pembuatan website
                             untuk
                             edukasi, bisnis, atau perusahaan kamu? kami ada 24/7 menyediakan kebutuhanmu.</p>
@@ -77,7 +77,7 @@
                             @foreach ($populars as $popular)
                                 <div class="post post-list-sm circle">
                                     <div class="thumb rounded mt-2">
-                                        <a href="blog-single.html">
+                                        <a href="#">
                                             <div class="inner">
                                                 <img src="{{ asset('storage/' . $popular->banner) }}" alt="post-title" />
                                             </div>
@@ -89,7 +89,7 @@
                                                 href="{{ route('project.detail', $popular->slug) }}">{{ $popular->title }}</a>
                                         </h6>
                                         <ul class="meta list-inline mt-1 mb-0">
-                                            <li class="list-inline-item">{{ $popular->visit_count_total }} kali dilihat
+                                            <li class="list-inline-item">{{ $popular->visit_count }} kali dilihat
                                             </li>
                                         </ul>
                                     </div>

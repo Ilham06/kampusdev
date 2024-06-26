@@ -48,6 +48,7 @@ class HomeController extends Controller
     {
         $project = $this->projectRepository->findBySlug($slug);
         $project->visit();
+        $this->projectRepository->visitCounter($project->id);
         $categories = $this->categoryRepository->getAll();
         $related_projects = $this->projectRepository->getByCategoryWithLimit($project->category_id, 2);
 

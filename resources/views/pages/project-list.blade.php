@@ -35,9 +35,9 @@
                             <!-- post -->
                             <div class="post post-grid rounded bordered">
                                 <div class="thumb top-rounded">
-                                    <a href="category.html" class="category-badge position-absolute">{{ $project->category->alias }}</a>
+                                    <a href="#" class="category-badge position-absolute">{{ $project->category->alias }}</a>
     
-                                    <a href="blog-single.html">
+                                    <a href="{{ route('project.detail', $project->slug) }}">
                                         <div class="inner">
                                             <img src="{{ asset('storage/' . $project->banner) }}" alt="post-title" />
                                         </div>

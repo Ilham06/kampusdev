@@ -1186,7 +1186,7 @@ section {
   -moz-transform: scale(1.07);
   -ms-transform: scale(1.07);
   -o-transform: scale(1.07);
-  transform: scale(1.07);
+  transform: scale(1.01);
 }
 .post .post-title a {
   color: #203656;

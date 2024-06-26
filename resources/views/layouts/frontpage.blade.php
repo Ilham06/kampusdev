@@ -83,7 +83,7 @@
 
         <!-- logo -->
         <div class="logo">
-            <a href="personal.html" class="d-block text-logo">KampusDev<span class="dot">.</span></a>
+            <a href="#" class="d-block text-logo">KampusDev<span class="dot">.</span></a>
         </div>
 
         <!-- menu -->

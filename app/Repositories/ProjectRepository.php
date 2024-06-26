@@ -104,4 +104,16 @@ class ProjectRepository
 
         return true;
     }
+
+    public function visitCounter($id)
+    {
+        $project = $this->model->findOrFail($id);
+        if ($project) {
+            $project->update([
+                'visit_count' => $project->visit_count + 1
+            ]);
+            return $project;
+        }
+        return null;
+    }
 }

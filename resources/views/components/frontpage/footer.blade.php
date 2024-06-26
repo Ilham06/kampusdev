@@ -4,7 +4,7 @@
             <div class="row d-flex align-items-center gy-4">
                 <!-- copyright text -->
                 <div class="col-md-4">
-                    <span class="copyright">© 2024 Koding Kampus.</span>
+                    <span class="copyright">© 2024 KampusDev.</span>
                 </div>
 
                 <!-- social icons -->

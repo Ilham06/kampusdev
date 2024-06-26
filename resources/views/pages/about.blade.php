@@ -47,7 +47,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <p>
-                                    Kami hadir untuk untuk berdedikasi dalam membantu menyediakan berbagai program dan
+                                    Kami hadir untuk berdedikasi dalam membantu menyediakan berbagai program dan
                                     solusi yang inovatif di bidang teknologi dan edukasi. Dengan pengalaman bertahun-tahun
                                     dan tim yang ahli di bidangnya, kami menawarkan layanan yang dapat membantu Anda dalam
                                     berbagai proyek akademik dan penelitian dengan teknologi yang fleksibel dan terbaru.
@@ -120,7 +120,7 @@
                                     <!-- <img src="images/logo.svg" alt="logo" class="mb-4" /> -->
                                     <h3>Bangun websitemu bersama kami</h3>
                                     <p class="mb-4">
-                                        Kami menyediakan Mari bangun websitemu bersama kami dan wujudkan kehadiran digital
+                                        Mari bangun websitemu bersama kami dan wujudkan kehadiran digital
                                         yang kuat dan profesional. Hubungi kami sekarang untuk konsultasi gratis dan
                                         dapatkan solusi terbaik untuk kebutuhan Anda!
                                     </p>
