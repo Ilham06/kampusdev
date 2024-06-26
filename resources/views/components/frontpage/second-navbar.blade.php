@@ -35,18 +35,18 @@
                     <div class="collapse navbar-collapse flex-grow-1">
                         <!-- menus -->
                         <ul class="navbar-nav">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('homepage') }}">Home</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item {{ Request::path() == 'project' ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('project.list') }}">Projek</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item {{ Request::path() == 'artikel' ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('article') }}">Artikel</a>
                             </li>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="index.html">Tentang Kami</a>
+                            <li class="nav-item dropdown {{ in_array(Request::path(), ['tentang-kami', 'faq', 'kebijakan-layanan']) ? 'active' : '' }}">
+                                <a class="nav-link dropdown-toggle" href="#">Tentang Kami</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a class="dropdown-item" href="{{ route('aboutme') }}">Profile</a>
@@ -63,7 +63,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item {{ Request::path() == 'kontak' ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('contact') }}">Kontak</a>
                             </li>
                         </ul>

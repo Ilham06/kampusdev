@@ -4,7 +4,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Kampus Dev - Solusi Koding Kampusmu</title>
-    <meta name="description" content="Temukan solusi koding terbaik dan artikel terbaru di Kampus Dev. Bergabunglah dengan komunitas kami untuk memperdalam pengetahuan teknologi." />
+    <meta name="description" content="Temukan solusi koding terbaik dan artikel terbaru di Kampus Dev. Temukan solusi koding untuk perkuliahan informatikamu disini." />
+    <meta name="keywords" content="SPK, Sistem Pendukung Keputusan, Analytic Hierarchy Process, Decision Support System, AHP, SAW, WP, TOPSIS, Forecasting, Peramalan, Sistem Pakar, Klasifikasi, Naive Bayes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/main-logo.png') }}" />
 

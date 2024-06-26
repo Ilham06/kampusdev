@@ -39,7 +39,7 @@
                       <!-- FAQ 2 -->
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingTwo">
-                          <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                             Apa layanan yang ditawarkan oleh Kampusdev?
                           </button>
                         </h2>
@@ -53,7 +53,7 @@
                       <!-- FAQ 3 -->
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingThree">
-                          <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                             Bagaimana cara menggunakan layanan Kampusdev?
                           </button>
                         </h2>
@@ -67,7 +67,7 @@
                       <!-- FAQ 4 -->
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingFour">
-                          <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
                             Apakah layanan Kampusdev terjamin kerahasiaannya?
                           </button>
                         </h2>
@@ -81,7 +81,7 @@
                       <!-- FAQ 5 -->
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingFive">
-                          <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
                             Bagaimana sistem pembayaran di Kampusdev?
                           </button>
                         </h2>
@@ -95,7 +95,7 @@
                       <!-- FAQ 6 -->
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingSix">
-                          <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
                             Apakah Kampusdev menyediakan layanan revisi?
                           </button>
                         </h2>
@@ -109,7 +109,7 @@
                       <!-- FAQ 7 -->
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingSeven">
-                          <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
                             Bagaimana kebijakan pengembalian uang di Kampusdev?
                           </button>
                         </h2>
