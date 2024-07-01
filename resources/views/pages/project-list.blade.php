@@ -1,5 +1,7 @@
 @extends('layouts.frontpage')
 
+@section('title', 'Projek - Kampus DEV')
+
 @section('content')
     <div class="container">
         <form action="{{ route('project.list') }}">

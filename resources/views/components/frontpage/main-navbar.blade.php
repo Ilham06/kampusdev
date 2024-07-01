@@ -4,7 +4,7 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-md-4 col-sm-12 col-xs-12 text-center">
                 <!-- site logo -->
-                <a class="navbar-brand" href="/"><img src="{{ asset('assets/main-logo.png') }}" alt="logo" /></a>
+                <a class="navbar-brand" href="/"><img width="25%" src="{{ asset('favicon.ico') }}" alt="logo" /></a>
                 <a href="/" class="d-block text-logo">KampusDev<span class="dot">.</span></a>
                 <span class="slogan d-block">Temukan semua solusi kebutuhan project kuliahmu disini.</span>
             </div>

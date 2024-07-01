@@ -1,5 +1,7 @@
 @extends('layouts.frontpage')
 
+@section('title', $project->title .' - Kampus DEV')
+
 @section('content')
     <section class="main-content mt-3">
         <div class="container-xl">

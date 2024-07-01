@@ -1,5 +1,7 @@
 @extends('layouts.frontpage')
 
+@section('title', 'Kebijakan dan layanan - Kampus DEV')
+
 @section('content')
     <!-- page header -->
     <section class="page-header">
