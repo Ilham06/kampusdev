@@ -53,19 +53,11 @@
                             </p>
 
                             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                                        aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                                        aria-label="Slide 3"></button>
-                                </div>
                                 <div class="carousel-inner">
                                     @foreach ($project->project_images as $key => $image)
                                         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                                             <img src="{{ asset('storage/' . $image->path) }}" class="d-block w-100"
-                                                alt="...">
+                                                alt="sistem">
                                             <div class="carousel-caption d-none d-md-block relative mt-3">
                                                 <figcaption class="figure-caption text-center">
                                                     {{ $image->label }}
@@ -131,6 +123,8 @@
                                     <li>{{ $package }}</li>
                                 @endforeach
                             </ul>
+                            <h4>Harga dan pembelian</h4>
+                            <p>Anda dapat mendapatkan source code penuh dan benefit lain dari aplikasi ini dengan membayar sebesar <span class="fw-bold">Rp. {{number_format($project->price, 0, ',', '.')}} ,-</span></p>
                         </div>
                     </div>
 
