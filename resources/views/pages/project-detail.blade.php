@@ -38,7 +38,7 @@
                         </div>
                         <!-- featured image -->
                         <div class="featured-image">
-                            <img src="{{ asset('storage/' . $project->banner) }}" alt="post-title" />
+                            <img src="{{ asset('storage/' . $project->banner) }}" alt="aplikasi-{{$project->slug}}" />
                         </div>
                         <!-- post content -->
                         <div class="post-content clearfix">
@@ -57,7 +57,7 @@
                                     @foreach ($project->project_images as $key => $image)
                                         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                                             <img src="{{ asset('storage/' . $image->path) }}" class="d-block w-100"
-                                                alt="sistem">
+                                            alt="aplikasi-{{$project->slug}}">
                                             <div class="carousel-caption d-none d-md-block relative mt-3">
                                                 <figcaption class="figure-caption text-center">
                                                     {{ $image->label }}
@@ -129,7 +129,7 @@
                     </div>
 
                     <p class="mt-5">Untuk pembelian, pemesanan dan dan informasi lainnya dari project ini atau yang lain,
-                        dapat menghubungi kami melalui nomor WhatsApp pada 0822-3437-5472 atau dengan menekan tombol chat
+                        dapat menghubungi kami melalui nomor WhatsApp pada 0858-7667-9865 atau dengan menekan tombol chat
                         dibawah ini.</p>
                         <a target="_blank" href="https://wa.me/62{{config('general.phone')}}"><button class="btn btn-default">Chat Whatapps</button></a>
 

@@ -34,6 +34,7 @@ class CreateProjectRequest extends FormRequest
             'other_information' => 'nullable|string',
             'image_labels.*' => 'required|string',
             'image.*' => 'required|image',
+            'price' => 'required'
         ];
     }
 }

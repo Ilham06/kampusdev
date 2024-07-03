@@ -21,12 +21,12 @@
                             <!-- post -->
                             <div class="post post-grid rounded bordered">
                                 <div class="thumb top-rounded">
-                                    <a href="#"
-                                        class="category-badge position-absolute">{{ $project->category->alias }}</a>
+                                    {{-- <a href="#"
+                                        class="category-badge position-absolute">{{ $project->category->alias }}</a> --}}
 
                                     <a href="{{ route('project.detail', $project->slug) }}">
                                         <div class="inner">
-                                            <img src="{{ asset('storage/' . $project->banner) }}" alt="post-title" />
+                                            <img src="{{ asset('storage/' . $project->banner) }}" alt="{{$project->slug}}-img" />
                                         </div>
                                     </a>
                                 </div>
@@ -34,7 +34,7 @@
                                     <ul class="meta list-inline mb-0">
                                         <li class="list-inline-item">
                                             <a href="#"
-                                                class="fw-semibold">{{ json_decode($project->technologies)[0] }}</a>
+                                                class="fw-semibold">{{ $project->category->alias }}</a>
                                         </li>
                                         <li class="list-inline-item">
                                             {{ \Carbon\Carbon::parse($project->created_at)->format('d M Y') }}</li>

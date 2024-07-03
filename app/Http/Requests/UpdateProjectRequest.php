@@ -34,6 +34,7 @@ class UpdateProjectRequest extends FormRequest
             'other_information' => 'nullable|string',
             'image_labels.*' => 'nullable|string',
             'image.*' => 'nullable|image',
+            'price' => 'required'
         ];
     }
 }

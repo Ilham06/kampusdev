@@ -34,6 +34,11 @@
                         </div>
 
                         @include('components.forms.textfield', [
+                            'name' => 'price',
+                            'label' => 'Harga',
+                        ])
+
+                        @include('components.forms.textfield', [
                             'name' => 'demo_url',
                             'label' => 'Demo Url',
                         ])

@@ -41,6 +41,12 @@
                         </div>
 
                         @include('components.forms.textfield', [
+                            'name' => 'price',
+                            'label' => 'Harga',
+                            'value' => $data->price
+                        ])
+
+                        @include('components.forms.textfield', [
                             'name' => 'demo_url',
                             'label' => 'Demo Url',
                             'value' => $data->demo_url,
