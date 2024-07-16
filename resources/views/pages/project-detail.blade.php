@@ -131,7 +131,7 @@
                     <p class="mt-5">Untuk pembelian, pemesanan dan dan informasi lainnya dari project ini atau yang lain,
                         dapat menghubungi kami melalui nomor WhatsApp pada 0858-7667-9865 atau dengan menekan tombol chat
                         dibawah ini.</p>
-                        <a target="_blank" href="https://wa.me/62{{config('general.phone')}}"><button class="btn btn-default">Chat Whatapps</button></a>
+                        <a target="_blank" href="https://wa.me/62{{config('general.phone')}}"><button class="btn btn-default">Chat Whatsapp</button></a>
 
                     <div class="spacer" data-height="50"></div>
 
@@ -142,7 +142,7 @@
                         <div class="details">
                             <h4 class="name"><a href="#">Ilham Muhamad</a></h4>
                             <p>
-                                Hello.. saya Ilham Muhamad, seorang Software Engginer dengan pengalaman 3 tahun di industri programming di bidang startup, edukasi serta pemerintahan.
+                                Haloo.. Saya Ilham Muhamad, seorang Software Engineer dengan pengalaman 3 tahun di industri programming di bidang startup, edukasi serta pemerintahan.
                             </p>
                             <!-- social icons -->
                             <ul class="social-icons list-unstyled list-inline mb-0">

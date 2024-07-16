@@ -35,7 +35,7 @@ class HomeController extends Controller
     {
         $categories = $this->categoryRepository->getAll();
         
-        $projects = $this->projectRepository->getAll();
+        $projects = $this->projectRepository->getLatest();
         $populars = $this->projectRepository->getPopularProjects();
 
         $currentHour = Carbon::now()->format('H');
