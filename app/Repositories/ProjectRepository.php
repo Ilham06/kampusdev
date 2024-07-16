@@ -25,7 +25,7 @@ class ProjectRepository
 
     public function getLatest()
     {
-        return $this->model->orderBy('created_at', 'desc')->take(5)->get();
+        return $this->model->orderBy('created_at', 'desc')->take(6)->get();
     }
 
     public function pagination()
