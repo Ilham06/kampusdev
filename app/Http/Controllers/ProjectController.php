@@ -28,6 +28,7 @@ class ProjectController extends Controller
     public function index()
     {
         $data = $this->projectRepository->getAll();
+        
         return view('pages.admin.project.index', compact('data'));
     }
 

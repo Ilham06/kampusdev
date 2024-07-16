@@ -14,10 +14,11 @@
                         <thead>
                             <tr>
                                 <th width="5%" class="fw-bold" scope="col">#</th>
-                                <th width="20%" scope="col" class="fw-bold">Banner</th>
+                                <th width="15%" scope="col" class="fw-bold">Banner</th>
                                 <th class="fw-bold" scope="col">Nama Projek</th>
                                 <th class="fw-bold" scope="col">Kategori</th>
-                                {{-- <th class="fw-bold" scope="col">Deskripsi</th> --}}
+                                <th class="fw-bold" scope="col">Total Pengunjung</th>
+                                <th class="fw-bold" scope="col">Total Di Klik</th>
                                 <th class="fw-bold" scope="col">Aksi</th>
                             </tr>
                         </thead>
@@ -30,6 +31,8 @@
                                     </td>
                                     <td>{{ $item['title'] }}</td>
                                     <td>{{ $item->category->name }}</td>
+                                    <td>{{$item->visit_count_total}}</td>
+                                    <td>{{$item->visit_count}}</td>
                                     <td>
                                         @include('components.table-action-button', [
                                             'edit' => route('project.edit', $item['slug']),

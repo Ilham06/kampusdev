@@ -20,7 +20,7 @@ class ProjectRepository
 
     public function getAll()
     {
-        return $this->model->orderBy('created_at', 'desc')->get();
+        return $this->model->orderBy('created_at', 'desc')->withTotalVisitCount()->get();
     }
 
     public function getLatest()
