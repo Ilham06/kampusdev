@@ -62,7 +62,7 @@ class HomeController extends Controller
         
         $categories = $this->categoryRepository->getAll();
 
-        $projects = Project::with('category');
+        $projects = Project::with('category')->orderBy('created_at', 'desc');
         if ($title) {
             $projects = $projects->where('slug', 'like', '%' . $title . '%');
         }
