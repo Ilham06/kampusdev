@@ -79,6 +79,14 @@
                                 </button>
                             </div>
 
+                            @if ($project->demo_url)
+                                <h4>Demo Aplikasi</h4>
+                                <p>
+                                    berikut adalah link demo untuk mencoba aplikasi. dalam mode demo ini, beberapa fitur tidak dapat diakses atau digunakan.
+                                </p>
+                                <a href="{{$project->demo_url}}">{{$project->demo_url}}</a>
+                            @endif
+
                             @if ($project->video_demo_url)
                                 <h4>Demo Projek</h4>
                                 <p>
