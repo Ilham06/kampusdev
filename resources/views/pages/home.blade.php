@@ -61,6 +61,30 @@
                     </div>
                 </div>
 
+                <div class="about-author padding-30 rounded">
+                    <div class="thumb">
+                        <img src="{{asset('assets/me.png')}}" alt="Katen Doe" />
+                    </div>
+                    <div class="details">
+                        <h4 class="name"><a href="#">Ilham Muhamad</a></h4>
+                        <p>
+                            Haloo.. Saya Ilham Muhamad, Owner Kampusdev. Seorang Software Engineer dengan pengalaman 3 tahun lebih di industri programming di bidang startup, edukasi serta pemerintahan.
+                        </p>
+                        <!-- social icons -->
+                        <ul class="social-icons list-unstyled list-inline mb-0">
+                            <li class="list-inline-item">
+                                <a target="_blank" href="https://www.instagram.com/hayhamm_/"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a target="_blank" href="https://www.linkedin.com/in/ilham-muhamad-suparyono-841102232/"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
             <div class="col-lg-4">
                 <!-- sidebar -->
@@ -101,6 +125,9 @@
 
                     <!-- widget categories -->
                     @include('components.frontpage.sticky-category')
+
+                    {{-- banner --}}
+                    <img src={{asset('assets/images/banner.png')}} alt="">
                 </div>
             </div>
         </div>
