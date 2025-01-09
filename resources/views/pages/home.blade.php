@@ -63,10 +63,11 @@
 
                 <div class="about-author padding-30 rounded">
                     <div class="thumb">
-                        <img src="{{asset('assets/me.png')}}" alt="Katen Doe" />
+                        <a href="https://portfolio-ilham06s-projects.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{asset('assets/me.png')}}" alt="Katen Doe" /></a>
                     </div>
                     <div class="details">
-                        <h4 class="name"><a href="#">Ilham Muhamad</a></h4>
+                        <h4 class="name"><a target="_blank" href="https://portfolio-ilham06s-projects.vercel.app/">Ilham Muhamad</a></h4>
                         <p>
                             Haloo.. Saya Ilham Muhamad, Owner Kampusdev. Seorang Software Engineer dengan pengalaman 3 tahun lebih di industri programming di bidang startup, edukasi serta pemerintahan.
                         </p>
@@ -80,6 +81,9 @@
                             </li>
                             <li class="list-inline-item">
                                 <a href="#"><i class="fab fa-youtube"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://portfolio-ilham06s-projects.vercel.app/" target="_blank"><i class="fab fa-chrome"></i></a>
                             </li>
                         </ul>
                     </div>
